@@ -53,19 +53,19 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_one).setOnClickListener(v -> {
 
-           //mFragManger.beginTransaction()
-           //        .addToBackStack(MyFragmentOne.class.getName())
-           //        .add(R.id.fragment_container_view, mFragOne).commit();
+           mFragManger.beginTransaction()
+                   .addToBackStack(MyFragmentOne.class.getName())
+                   .add(R.id.fragment_container_view, mFragOne).commit();
 
-            MyDialog dialog=new MyDialog(MainActivity.this);
-            dialog.setTitle("测试专用");
-            dialog.show();
+            //MyDialog dialog=new MyDialog(MainActivity.this);
+            //dialog.setTitle("测试专用");
+            //dialog.show();
         });
         findViewById(R.id.btn_two).setOnClickListener(v -> {
-            //mFragManger.findFragmentByTag(MyFragmentOne.class.getName());
-            //mFragManger.beginTransaction()
-            //        .addToBackStack(MyFragmentOne.class.getName())
-            //        .add(R.id.fragment_container_view, mFragTwo).commit();
+            mFragManger.findFragmentByTag(MyFragmentOne.class.getName());
+            mFragManger.beginTransaction()
+                    .addToBackStack(MyFragmentOne.class.getName())
+                    .add(R.id.fragment_container_view, mFragTwo).commit();
         });
 
     }

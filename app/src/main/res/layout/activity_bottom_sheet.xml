@@ -67,4 +67,6 @@
 
     </androidx.core.widget.NestedScrollView>-->
 
+    <!--<include layout="@layout/activity_main"/>-->
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
